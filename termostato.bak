@@ -1,0 +1,274 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:linear
+LIBS:regul
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:Power_Supplies
+LIBS:ESP8266
+LIBS:Connector
+LIBS:pulsador
+LIBS:termostato-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L HLK-PM03 U1
+U 1 1 5A3E8488
+P 3000 2650
+F 0 "U1" H 2850 2800 40  0000 C CNN
+F 1 "HLK-PM03" H 3000 2500 40  0000 C CNN
+F 2 "Power_Supply:HLK-PM03" H 2100 4000 60  0000 C CNN
+F 3 "" H 2100 4000 60  0000 C CNN
+	1    3000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02_Female J1
+U 1 1 5A3E8B13
+P 2250 2700
+F 0 "J1" H 2250 2800 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 2250 2500 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 2250 2700 50  0001 C CNN
+F 3 "" H 2250 2700 50  0001 C CNN
+	1    2250 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 2600 3650 2600
+Wire Wire Line
+	3650 2000 3650 3850
+Wire Wire Line
+	3850 2800 4050 2800
+Wire Wire Line
+	2450 2600 2700 2600
+Wire Wire Line
+	2450 2700 2700 2700
+NoConn ~ 4050 2600
+NoConn ~ 4050 2700
+NoConn ~ 4050 2900
+NoConn ~ 4050 3000
+NoConn ~ 4050 3100
+NoConn ~ 4050 3200
+NoConn ~ 5850 2900
+NoConn ~ 5850 3000
+NoConn ~ 5850 3100
+NoConn ~ 5850 3200
+$Comp
+L R R1
+U 1 1 5A3E9174
+P 3850 3000
+F 0 "R1" V 3930 3000 50  0000 C CNN
+F 1 "10K" V 3850 3000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3780 3000 50  0001 C CNN
+F 3 "" H 3850 3000 50  0001 C CNN
+	1    3850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2800 3850 2850
+Wire Wire Line
+	3850 3150 3850 3300
+$Comp
+L ESP-07v2 U2
+U 1 1 5A3E9303
+P 4950 2900
+F 0 "U2" H 4950 2800 50  0000 C CNN
+F 1 "ESP-07v2" H 4950 3000 50  0000 C CNN
+F 2 "ESP8266:ESP-07v2" H 4950 2900 50  0001 C CNN
+F 3 "" H 4950 2900 50  0001 C CNN
+	1    4950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3300 3650 3300
+Wire Wire Line
+	3650 2000 4950 2000
+Connection ~ 3650 2600
+$Comp
+L Conn_01x03_Female J2
+U 1 1 5A3E9536
+P 5250 1850
+F 0 "J2" H 5250 2050 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 5250 1650 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm" H 5250 1850 50  0001 C CNN
+F 3 "" H 5250 1850 50  0001 C CNN
+	1    5250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A3E96C3
+P 4950 4000
+F 0 "#PWR01" H 4950 3750 50  0001 C CNN
+F 1 "GND" H 4950 3850 50  0000 C CNN
+F 2 "" H 4950 4000 50  0001 C CNN
+F 3 "" H 4950 4000 50  0001 C CNN
+	1    4950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A3E96E1
+P 5350 2100
+F 0 "#PWR02" H 5350 1850 50  0001 C CNN
+F 1 "GND" H 5350 1950 50  0000 C CNN
+F 2 "" H 5350 2100 50  0001 C CNN
+F 3 "" H 5350 2100 50  0001 C CNN
+	1    5350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2050 5350 2100
+Wire Wire Line
+	4950 3800 4950 4000
+$Comp
+L GND #PWR03
+U 1 1 5A3E97AE
+P 3300 2800
+F 0 "#PWR03" H 3300 2550 50  0001 C CNN
+F 1 "GND" H 3300 2650 50  0000 C CNN
+F 2 "" H 3300 2800 50  0001 C CNN
+F 3 "" H 3300 2800 50  0001 C CNN
+	1    3300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2700 3300 2800
+Wire Wire Line
+	5250 2050 5850 2050
+Wire Wire Line
+	5850 2050 5850 2600
+Wire Wire Line
+	5150 2050 5150 2100
+Wire Wire Line
+	5150 2100 5950 2100
+Wire Wire Line
+	5950 2700 5850 2700
+$Comp
+L pulsador U3
+U 1 1 5A3E9900
+P 6350 2850
+F 0 "U3" H 6350 2850 60  0000 C CNN
+F 1 "pulsador" H 6350 2600 60  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 6350 2850 60  0001 C CNN
+F 3 "" H 6350 2850 60  0001 C CNN
+	1    6350 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3000 6150 3000
+$Comp
+L GND #PWR04
+U 1 1 5A3E9980
+P 6700 3000
+F 0 "#PWR04" H 6700 2750 50  0001 C CNN
+F 1 "GND" H 6700 2850 50  0000 C CNN
+F 2 "" H 6700 3000 50  0001 C CNN
+F 3 "" H 6700 3000 50  0001 C CNN
+	1    6700 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 3000 6700 3000
+$Comp
+L R R2
+U 1 1 5A3E9C05
+P 5950 2400
+F 0 "R2" V 6030 2400 50  0000 C CNN
+F 1 "180" V 5950 2400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5880 2400 50  0001 C CNN
+F 3 "" H 5950 2400 50  0001 C CNN
+	1    5950 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2100 5950 2250
+Wire Wire Line
+	5950 2550 5950 2700
+$Comp
+L Conn_01x04_Female J3
+U 1 1 5A3E9E45
+P 6400 2400
+F 0 "J3" H 6400 2600 50  0000 C CNN
+F 1 "Conn_01x04_Female" H 6400 2100 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04_Pitch2.54mm" H 6400 2400 50  0001 C CNN
+F 3 "" H 6400 2400 50  0001 C CNN
+	1    6400 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 3850 6050 3850
+Wire Wire Line
+	6050 3850 6050 2600
+Wire Wire Line
+	6050 2600 6300 2600
+Connection ~ 3650 3300
+$Comp
+L GND #PWR05
+U 1 1 5A3EA18F
+P 6600 2700
+F 0 "#PWR05" H 6600 2450 50  0001 C CNN
+F 1 "GND" H 6600 2550 50  0000 C CNN
+F 2 "" H 6600 2700 50  0001 C CNN
+F 3 "" H 6600 2700 50  0001 C CNN
+	1    6600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2700 6600 2600
+Wire Wire Line
+	6400 2800 6400 2600
+$Comp
+L R R3
+U 1 1 5A3EA258
+P 6400 3350
+F 0 "R3" V 6480 3350 50  0000 C CNN
+F 1 "4K7" V 6400 3350 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 6330 3350 50  0001 C CNN
+F 3 "" H 6400 3350 50  0001 C CNN
+	1    6400 3350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 2800 6400 2800
+Wire Wire Line
+	6100 2800 6100 3200
+Wire Wire Line
+	6100 3200 6400 3200
+Connection ~ 6100 2800
+Wire Wire Line
+	6400 3500 6400 3600
+Wire Wire Line
+	6400 3600 6050 3600
+Connection ~ 6050 3600
+$EndSCHEMATC
